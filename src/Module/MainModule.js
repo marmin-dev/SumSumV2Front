@@ -40,3 +40,8 @@ export const GetIn = styled.a`
     font-size: 1em; 
     text-align: center;
 `;
+
+export const UsernameInput = styled.input`
+
+
+`;
