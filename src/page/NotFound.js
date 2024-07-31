@@ -1,14 +1,12 @@
-import React from 'react';
-import { GetIn, GirlDiv, Text } from '../Module/MainModule';
-
-
+import React from "react";
+import { GetIn, GirlDiv, Text } from "../Module/MainModule";
 
 const NotFound = () => {
   return (
     <GirlDiv>
       <Text>
         길을 잘못들었어 404야
-        <GetIn href='/'>돌아가자</GetIn>
+        <GetIn href="/">돌아가자</GetIn>
       </Text>
     </GirlDiv>
   );

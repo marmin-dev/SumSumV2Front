@@ -7,7 +7,7 @@ const Main = () => {
     <GirlDiv>
       <Text>
         SUMSUMAI
-        <GetIn href='/suhee'>수희와 대화하기</GetIn>
+        <GetIn href='/username'>수희와 대화하기</GetIn>
       </Text>
     </GirlDiv>
   );
