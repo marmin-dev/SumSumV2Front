@@ -1,7 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ButtonDiv, ChatDiv, getFramdiv, ParkDiv } from "../Module/ChatModule";
 
 const ChatPage = () => {
-  return <h1>Chat Page</h1>;
+  const [FrameDiv, setFrameDiv] = useState(getFramdiv("girl1.png"));
+
+  return (
+    <ParkDiv>
+      <FrameDiv>
+        <ButtonDiv></ButtonDiv>
+        <ChatDiv></ChatDiv>
+      </FrameDiv>
+    </ParkDiv>
+  );
 };
 
 export default ChatPage;

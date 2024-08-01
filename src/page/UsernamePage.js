@@ -16,11 +16,17 @@ const UsernamePage = () => {
     setUserName(event.target.value);
   };
 
+  const handleEnter = (event) => {
+    if (event.key == "Enter") {
+      postUserNameAndGetIn();
+    }
+  };
+
   // 유저네임 입력 후 채팅방으로
   const postUserNameAndGetIn = async () => {
-    console.log("bro");
     let response = await postUsername(username);
-    console.log(response);
+    localStorage.setItem("sumsum_username", username);
+    window.location.href = "/suhee";
   };
 
   return (
@@ -31,6 +37,7 @@ const UsernamePage = () => {
         placeholder="내 이름은 무엇일까?"
         value={username}
         onChange={handleUserName}
+        onKeyDown={handleEnter}
       />
       <UserNameSubmit onClick={postUserNameAndGetIn}>입력</UserNameSubmit>
     </UsernameGirlDiv>

@@ -12,7 +12,7 @@ export const fadeIn = keyframes`
 export const GirlDiv = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url("/imgs/girl_couch.png");
+  background-image: url("/imgs/girl_original/girl_couch.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@ export const GirlDiv = styled.div`
 export const GirlDivWithOutFade = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url("/imgs/girl_couch.png");
+  background-image: url("/imgs/girl_original/girl_couch.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
