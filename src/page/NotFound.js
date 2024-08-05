@@ -1,6 +1,7 @@
 import React from "react";
 import { GetIn, GirlDiv, Text } from "../Module/MainModule";
 
+// 404
 const NotFound = () => {
   return (
     <GirlDiv>

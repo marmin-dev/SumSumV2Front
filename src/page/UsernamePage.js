@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {
   TextFaster,
   UsernameGirlDiv,
@@ -8,6 +7,7 @@ import {
 import { useState } from "react";
 import { postUsername } from "../Module/ApiModule";
 
+// 유저 이름 등록 페이지
 const UsernamePage = () => {
   const [username, setUserName] = useState("");
 

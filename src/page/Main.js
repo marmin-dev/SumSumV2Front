@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GetIn, GirlDiv, Text } from "../Module/MainModule";
 
+// 메인 화면
 const Main = () => {
   const [inUrl, setInUrl] = useState("/username");
 

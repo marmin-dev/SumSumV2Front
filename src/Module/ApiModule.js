@@ -4,7 +4,11 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 // 메시지 전송 함수
 export const chatToHer = async (message) => {
-  const response = axios.post(`${apiUrl}/message`, { message: message });
+  const username = localStorage.getItem("sumsum_username");
+  const response = axios.post(`${apiUrl}/message`, {
+    message: message,
+    username: username,
+  });
   return response;
 };
 
