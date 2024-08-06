@@ -1,8 +1,11 @@
+import { LogFrameDiv } from "../Module/ChatLogModule";
+import { ParkDiv } from "../Module/ChatModule";
+
 const ChatLogPage = () => {
   return (
-    <div>
-      <h1>chat</h1>
-    </div>
+    <ParkDiv>
+      <LogFrameDiv></LogFrameDiv>
+    </ParkDiv>
   );
 };
 

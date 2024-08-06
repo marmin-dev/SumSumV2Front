@@ -17,3 +17,13 @@ export const postUsername = async (username) => {
   const response = axios.post(`${apiUrl}/user`, { username: username });
   return response;
 };
+
+// 메시지 가져오기
+export const postMessages = async (page) => {
+  const username = localStorage.getItem("sumsum_username");
+  const response = axios.post(`${apiUrl}/messages`, {
+    page: page,
+    username: username,
+  });
+  return response;
+};

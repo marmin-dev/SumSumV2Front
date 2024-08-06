@@ -72,7 +72,9 @@ const ChatPage = () => {
           <ChatButton onClick={() => (window.location.href = "/")}>
             메인으로
           </ChatButton>
-          <ChatButton>대화내역</ChatButton>
+          <ChatButton onClick={() => (window.location.href = "/suhee/log")}>
+            대화내역
+          </ChatButton>
         </ButtonDiv>
         <ChatDiv>
           <ChatItemDiv>
