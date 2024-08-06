@@ -14,6 +14,7 @@ import { chatToHer } from "../Module/ApiModule";
 
 // 사용자와 AI 가 대화하는 페이지
 const ChatPage = () => {
+  const [isDisabled, setIsDisabled] = useState(false);
   const [frameSrc, setFrameSrc] = useState("girl1.png");
   const [placeHolder, setPlaceHolder] = useState("무슨말을 할까?");
   const [question, setQuestion] = useState("");
@@ -50,12 +51,14 @@ const ChatPage = () => {
 
   // 유저네임 입력 후 채팅방으로
   const postChatToHer = async () => {
+    setIsDisabled(true);
     setChat("음...");
     let response = await chatToHer(question);
     setQuestion("");
     setPlaceHolder(question);
     setChat(response.data.reply);
     setFrameSrc("girl1.png");
+    setIsDisabled(false);
   };
 
   const clickChangeImg = () => {
@@ -83,8 +86,11 @@ const ChatPage = () => {
               onChange={handleChat}
               value={question}
               onKeyDown={handleEnter}
+              readOnly={isDisabled}
             />
-            <ChatButton onClick={postChatToHer}>말하기</ChatButton>
+            <ChatButton onClick={postChatToHer} disabled={isDisabled}>
+              말하기
+            </ChatButton>
           </ChatItemDiv>
         </ChatDiv>
       </FrameDiv>
