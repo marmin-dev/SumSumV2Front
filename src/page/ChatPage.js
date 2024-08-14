@@ -67,7 +67,7 @@ const ChatPage = () => {
 
   return (
     <ParkDiv>
-      <FrameDiv frameSrc={frameSrc}>
+      <FrameDiv framesrc={frameSrc}>
         <ButtonDiv>
           <ChatButton onClick={() => (window.location.href = "/")}>
             메인으로

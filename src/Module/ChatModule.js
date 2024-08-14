@@ -15,7 +15,7 @@ export const ParkDiv = styled.div`
 `;
 
 export const FrameDiv = styled.div`
-  background-image: url(${(props) => `/imgs/girl_chat/${props.frameSrc}`});
+  background-image: url(${(props) => `/imgs/girl_chat/${props.framesrc}`});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
