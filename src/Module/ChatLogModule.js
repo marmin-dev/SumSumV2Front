@@ -11,7 +11,7 @@ export const LogFrameDiv = styled.div`
   display: flex;
   overflow-y: auto;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   @media (min-width: 500px) {
     height: 90vh;
     width: 500px;

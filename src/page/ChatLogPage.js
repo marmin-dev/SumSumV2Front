@@ -38,6 +38,10 @@ const ChatLogPage = () => {
 
   // 스크롤 이벤트 감지
   useEffect(() => {
+    if (!localStorage.getItem("sumsum_username")) {
+      alert("너 이름이 뭔지 안알려준거같아");
+      window.location.href = "/username";
+    }
     const getNewMessage = async () => {
       const newMsg = await postMessages(page);
       setMessages(newMsg.data.reverse());

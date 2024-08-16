@@ -22,6 +22,13 @@ const ChatPage = () => {
   const [chatExport, setChatExport] = useState("");
   const currentIndex = useRef(0);
 
+  useEffect(() => {
+    if (!localStorage.getItem("sumsum_username")) {
+      alert("너 이름이 뭔지 안알려준거같아");
+      window.location.href = "/username";
+    }
+  }, []);
+
   // 대화 하는 기분이 들도록 한글자씩 렌더링
   useEffect(() => {
     currentIndex.current = 0;
