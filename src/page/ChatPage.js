@@ -64,7 +64,17 @@ const ChatPage = () => {
     setQuestion("");
     setPlaceHolder(question);
     setChat(response.data.reply);
-    setFrameSrc("girl1.png");
+    // 감정에 따라 표정 변화
+    if (response.data.emotion.includes("기쁨")) {
+      setFrameSrc("girl_happy.png");
+    } else if (response.data.emotion.includes("화남")) {
+      setFrameSrc("girl_mad.png");
+    } else if (response.data.emotion.includes("슬픔")) {
+      setFrameSrc("girl_sad.png");
+    } else {
+      setFrameSrc("girl1.png");
+    }
+
     setIsDisabled(false);
   };
 
